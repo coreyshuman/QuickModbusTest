@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Node Modbus Test</title>
+  <meta name="description" content="Modbus Test in Node">
+  <meta name="author" content="Corey Shuman">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <div class="alert alert-danger fade show" role="alert" style="display: none;">
+      <button type="button" class="close" id="alertHide" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong>Error:</strong>&nbsp;<span id="errMsg"></span>
+    </div>
+    <div class="jumbotron">
+      <h1 class="display-3">Node Modbus Test</h1>
+      <p class="lead">Simple Modbus test in Node. Read 3 holding registers (and write to third) from PLC #1 at 192.168.0.10</p>
+      <hr class="my-4">
+      <table class="table table-striped">
+        <tr>
+          <th>Register 1</th>
+          <th>Register 2</th>
+          <th>Register 3</th>
+        </tr>
+        <tr>
+          <td><div id="reg1">-</div></td>
+          <td><div id="reg2">-</div></td>
+          <td><div id="reg3">-</div></td>
+        </tr>
+      </table
+      <p class="lead">
+        <a id="pollBtn" class="btn btn-primary" href="#" role="button">Start Polling</a>
+        <a id="writeBtn" class="btn btn-primary" href="#" role="button">Toggle Register 3</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
